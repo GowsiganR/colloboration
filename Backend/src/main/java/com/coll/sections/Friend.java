@@ -15,6 +15,8 @@ public class Friend {
 private int friendId;
 private String username;
 private String friendName;
+private String friendFirstName;
+private String friendLastName;
 private String status;
 
 public int getFriendId() {
@@ -39,6 +41,20 @@ public void setFriendName(String friendName) {
 public String getStatus() {
 	return status;
 }
+
+public String getFriendFirstName() {
+	return friendFirstName;
+}
+public void setFriendFirstName(String friendFirstName) {
+	this.friendFirstName = friendFirstName;
+}
+public String getFriendLastName() {
+	return friendLastName;
+}
+public void setFriendLastName(String friendLastName) {
+	this.friendLastName = friendLastName;
+}
+
 public void setStatus(String status) {
 	this.status = status;
 }
