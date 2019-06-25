@@ -49,10 +49,10 @@ public class FriendDAOTest {
 		Friend friend=friendDAO.getFriend(533);
 		assertTrue("problem in adding friend",friendDAO.acceptFriendRequest(friend));
 	}
-    
+    @Ignore
 	@Test
 	public void deletefriendrequesttest() {
-		Friend friend=friendDAO.getFriend(534);
+		Friend friend=friendDAO.getFriend(543);
 		assertTrue("problem in adding friend",friendDAO.deleteFriendRequest(friend));
 	}
     

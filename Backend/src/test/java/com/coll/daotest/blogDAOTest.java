@@ -42,10 +42,10 @@ public class blogDAOTest {
 		blog.setBlogname("second blog");
 		assertTrue("problem in updating blog",blogDAO.updateBlog(blog));
 	}
-	
+	@Ignore
 	@Test
 	public void deleteblogtest() {
-		Blog blog=blogDAO.getBlog(518);
+		Blog blog=blogDAO.getBlog(571);
 		assertTrue("problem in deleting blog",blogDAO.deleteBlog(blog));
 	}
 	
@@ -63,7 +63,7 @@ public class blogDAOTest {
 	
 	@Test
 	public void incrementdislikestest() {
-		assertTrue("problem in incrementing likes",blogDAO.incrementDislikes(531));
+		assertTrue("problem in incrementing likes",blogDAO.incrementDislikes(570));
 	}
 	
 	@Test

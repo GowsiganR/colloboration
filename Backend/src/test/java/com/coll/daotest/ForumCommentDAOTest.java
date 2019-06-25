@@ -48,7 +48,7 @@ public class ForumCommentDAOTest {
 	    	System.out.println("id:"+forumcomment.getCommentId());
 	    }
 	}
-	
+	@Ignore
 	@Test
      public void updateforumcommenttest() {
 			ForumComment forumcomment=forumcommentDAO.getForumComment(502);

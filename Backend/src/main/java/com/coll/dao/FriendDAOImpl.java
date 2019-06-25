@@ -43,8 +43,9 @@ public class FriendDAOImpl implements FriendDAO
 		@Override
 		public List<Friend> showPendingFriendRequest(String username) {
 			Session session=sessionFactory.openSession();
-			Query query=session.createQuery("from Friend where username=:uname and status='NA'");
+			Query query=session.createQuery("from Friend where (username=:uname or friendName=:funame) and status='NA'");
 			query.setParameter("uname",username);
+			query.setParameter("funame",username);
 			List<Friend> listFriends=query.list();
 			return listFriends;
 		}
@@ -52,7 +53,7 @@ public class FriendDAOImpl implements FriendDAO
 	@Override
 	public List<UserDetail> showSuggestedFriends(String username) {
 		Session session=sessionFactory.openSession();
-		Query query=session.createNativeQuery("select username from userdetail where username not in (select friendusername from friend where username='"+username+"') and username not in (select username from friend where friendusername='"+username+"' and status='A') and username!='"+username+"'");
+		Query query=session.createNativeQuery("select username from userdetail where username not in (select friendName from friend where username='"+username+"') and username not in (select username from friend where friendName='"+username+"') and username!='"+username+"'");
         List<String> userList=query.list();	
         ArrayList<UserDetail> userDetailList=new ArrayList<UserDetail>();
         int i=0;

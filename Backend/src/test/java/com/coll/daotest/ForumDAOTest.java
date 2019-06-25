@@ -45,8 +45,8 @@ public class ForumDAOTest {
 		Forum forum=forumDAO.getForum(501);
 		forum.setForumContent("first content");
 		assertTrue("problem in updating forum",forumDAO.updateForum(forum));
-	}
-
+	} 
+    @Ignore
 	@Test
 	public void deleteforumtest() {
 		Forum forum=forumDAO.getForum(503);

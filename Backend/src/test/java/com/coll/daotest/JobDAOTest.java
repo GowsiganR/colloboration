@@ -36,7 +36,7 @@ public class JobDAOTest {
 	    job.setSkills("java");
 	    assertTrue("problem in adding job",jobDAO.addJob(job));
 	}
-	
+	@Ignore
 	@Test
 	public void getjobtest() {
 		assertNotNull("problem in getting job",jobDAO.getJob(501));
@@ -48,7 +48,7 @@ public class JobDAOTest {
 	    	System.out.println("jobid:"+job.getJobId());
 	    }
 	}
-	
+	@Ignore
 	@Test
 	public void deletejobtest() {
 		Job job=jobDAO.getJob(503);

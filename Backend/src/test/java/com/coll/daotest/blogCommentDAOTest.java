@@ -37,13 +37,14 @@ public class blogCommentDAOTest {
 	public void getblogcommenttest() {
 		assertNotNull("problem in getting blogcomment",blogcommentDAO.getBlogComment(501));
 	}
-	
+	@Ignore
 	@Test
 	public void updateblogcommenttest() {
 		blogComment blogcomment=blogcommentDAO.getBlogComment(501);
 		blogcomment.setBlogId(529);
 		assertTrue("problem in adding blog comment",blogcommentDAO.updateBlogComment(blogcomment));
 	}
+	@Ignore
 	@Test
 	public void deleteblogcomment() {
 		blogComment blogcomment=blogcommentDAO.getBlogComment(501);

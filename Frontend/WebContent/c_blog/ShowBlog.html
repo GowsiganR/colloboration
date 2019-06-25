@@ -1,0 +1,8 @@
+<div ng-controller="BlogController">
+<div ng-repeat="blog in blogdata">
+<div ng-show="blog.status=='A'">
+<p>{{blog.blogname}}    <button ng-click="incrementLikes(blog.blogid)">Like</button> {{blog.likes}}   <button ng-click="incrementDislikes(blog.blogid)">Dislike</button> {{blog.dislikes}}</p>
+<p>{{blog.blogcontent}}</p>
+</div>
+</div>
+</div>

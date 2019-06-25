@@ -34,6 +34,7 @@ import com.coll.sections.Forum;
 import com.coll.sections.ForumComment;
 import com.coll.sections.Friend;
 import com.coll.sections.Job;
+import com.coll.sections.ProfilePicture;
 
 @Configuration
 @EnableTransactionManagement
@@ -66,6 +67,8 @@ public SessionFactory getSessionFactory()
 	factory.addAnnotatedClass(ForumComment.class);
 	factory.addAnnotatedClass(Friend.class);
 	factory.addAnnotatedClass(Job.class);
+	factory.addAnnotatedClass(ProfilePicture.class);
+
 	
 	System.out.println(">>>>>>SessionFactory Object created<<<<<<");
 	return factory.buildSessionFactory();
