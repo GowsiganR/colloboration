@@ -42,7 +42,6 @@ public class blogRestController {
 	{
 		blog.setCreateDate(new java.util.Date());
 		blog.setStatus("NA");
-		blog.setUsername("Gowsigan");
 		blog.setLikes(0);
 		blog.setDislikes(0);
 		if(blogDAO.addBlog(blog))
