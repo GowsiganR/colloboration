@@ -1,0 +1,15 @@
+<div ng-controller="UserController">
+<h2>LoginPage</h2>
+<h3>{{error}}</h3>
+<form>
+  
+      <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" ng-model="userDetail.username" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" ng-model="userDetail.password" required>
+      <button ng-click="checkUser()">Submit</button>
+    </div>
+</form>
+</div>
