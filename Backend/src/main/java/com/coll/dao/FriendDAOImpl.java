@@ -40,14 +40,14 @@ public class FriendDAOImpl implements FriendDAO
 	}
 	
 	
-		@Override
-		public List<Friend> showPendingFriendRequest(String username) {
-			Session session=sessionFactory.openSession();
-			Query query=session.createQuery("from Friend where (username=:uname or friendName=:funame) and status='NA'");
-			query.setParameter("uname",username);
-			query.setParameter("funame",username);
-			List<Friend> listFriends=query.list();
-			return listFriends;
+	@Override
+	public List<Friend> showPendingFriendRequest(String username) {
+		Session session=sessionFactory.openSession();
+		Query query=session.createQuery("from Friend where (username=:uname or friendName=:funame) and status='NA'");
+		query.setParameter("uname",username);
+		query.setParameter("funame",username);
+		List<Friend> listFriends=query.list();
+		return listFriends;
 		}
 		
 	@Override

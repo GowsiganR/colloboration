@@ -27,6 +27,7 @@ public class blogDAOImpl implements blogDAO {
 			return false;
 		}
 	}
+	
 	@Override
 	public boolean updateBlog(Blog blog) {
 		
@@ -58,6 +59,7 @@ public class blogDAOImpl implements blogDAO {
 		session.close();
 		return blog;
 	}
+	
 	@Override
 	public List<Blog> getBlogs() {
 		Session session=sessionFactory.openSession();
@@ -121,11 +123,13 @@ public class blogDAOImpl implements blogDAO {
 			return false;
 		}
 	}
+	
 	@Override
 	public boolean approveBlog(Blog blog) {
 		// TODO Auto-generated method stub
 		return false;
 	}
+	
 	@Override
 	public boolean rejectBlog(Blog blog) {
 		// TODO Auto-generated method stub

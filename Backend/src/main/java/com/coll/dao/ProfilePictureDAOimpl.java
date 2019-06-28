@@ -29,6 +29,7 @@ public boolean save(ProfilePicture profilePicture) {
 		}
 		
 	}
+	
 	@Override
 	public ProfilePicture getProfilePicture(String username) {
 		Session session=sessionFactory.openSession();

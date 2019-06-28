@@ -27,13 +27,15 @@ public boolean addUser(UserDetail user) {
 		return false;
 	}
 }
+
 @Override
 public UserDetail getUser(String username) {
 	  Session session=sessionFactory.openSession();
-	    UserDetail user=session.get(UserDetail.class,username);
-	    session.close();
-		return user;
+	  UserDetail user=session.get(UserDetail.class,username);
+	  session.close();
+	  return user;
 	}
+
 @Override
 public boolean updateUser(UserDetail user) {
     
@@ -47,11 +49,12 @@ public boolean updateUser(UserDetail user) {
 }
 @Override
 public List<UserDetail> getUsers() {
-	    Session session=sessionFactory.openSession();
-		Query query=session.createQuery("from UserDetail");
-		List<UserDetail> listUsers=query.list();
-		return listUsers;
+	 Session session=sessionFactory.openSession();
+	 Query query=session.createQuery("from UserDetail");
+	 List<UserDetail> listUsers=query.list();
+	 return listUsers;
 	}
+
 @Override
 public UserDetail checkUser(UserDetail userDetail) {
 

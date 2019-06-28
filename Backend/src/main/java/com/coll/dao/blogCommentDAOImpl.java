@@ -27,6 +27,7 @@ public class blogCommentDAOImpl implements blogCommentDAO {
 		return false;
 		}
 	}
+	
 	@Override
 	public List<blogComment> getblogComments() {
 		Session session=sessionFactory.openSession();
@@ -34,6 +35,7 @@ public class blogCommentDAOImpl implements blogCommentDAO {
 	    List<blogComment> listComments=query.list();
 	    return listComments;
 	}
+	
 	@Override
 	public boolean updateBlogComment(blogComment blogcomment) {
 		
@@ -45,8 +47,9 @@ public class blogCommentDAOImpl implements blogCommentDAO {
 		return false;
 		}
 	}
-		@Override
-		public boolean deleteBlogComment(blogComment blogcomment) {
+	
+	@Override
+	public boolean deleteBlogComment(blogComment blogcomment) {
 			
 			try {
 				sessionFactory.getCurrentSession().delete(blogcomment);
@@ -57,6 +60,7 @@ public class blogCommentDAOImpl implements blogCommentDAO {
 			}
 		
 	}
+	
 	@Override
 	public blogComment getBlogComment(int commentId) {
 		Session session=sessionFactory.openSession();

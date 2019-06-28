@@ -30,6 +30,7 @@ public class ForumCommentDAOImpl implements ForumCommentDAO {
 		return false;
 		}
 	}
+	
 	@Override
 	public ForumComment getForumComment(int commentId) {
 		Session session=sessionFactory.openSession();
@@ -45,6 +46,7 @@ public class ForumCommentDAOImpl implements ForumCommentDAO {
 		List<ForumComment> listComments=query.list();
 		return listComments;
 	}
+	
 	@Override
 	public boolean updateForumComment(ForumComment forumcomment) {
 	

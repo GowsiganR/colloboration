@@ -35,6 +35,7 @@ public class ForumDAOTest {
 		System.out.println("just for fun");
 		assertTrue("problem in adding forum",forumDAO.addForum(forum));
 	}
+	@Ignore
 	@Test
 	public void getforumtest() {
 		assertNotNull("problem in getting forum",forumDAO.getForum(502));
@@ -60,14 +61,14 @@ public class ForumDAOTest {
 			System.out.println("id:"+forum.getForumId());
 		}
 	}
-	
+	@Ignore
 	@Test
 	public void approveforumtest() {
 	
 		Forum forum=forumDAO.getForum(502);
 		assertTrue("problem in approving forum",forumDAO.approveForum(forum));
 	}
-	
+	@Ignore
 	@Test
 	public void rejectforumtest() {
 		Forum forum=forumDAO.getForum(502);
