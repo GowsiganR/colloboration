@@ -1,6 +1,7 @@
+
 <div ng-controller="UserController">
-<h2>LoginPage</h2>
-<h3>{{error}}</h3>
+
+<h3>{{error}}</h3><!-- 
 <form>
   
       <div class="container">
@@ -12,4 +13,41 @@
       <button ng-click="checkUser()">Submit</button>
     </div>
 </form>
+ -->
+ <center>
+ <br><br><br><br><b>Login</b>&nbsp
+	<span class="glyphicon glyphicon-gift"></span>
+	<br><br><br><br>
+<form>
+	<div class="container" style="padding-left:400px; padding-right: 400px" ng-controller="UserController">
+	
+    		<div class="input-group">
+     		 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+		<input id="name" type="text" 
+	ng-model="userDetail.username"
+	name="username" 
+	class="form-control"
+	placeholder="Enter your user name"
+	pattern="[A-Za-z]+" 
+	title="Enter only the alphabets between a to z"
+	required>
+		</div>
+		<br><br>
+		<br><br>
+		
+		<div class="input-group">
+      		<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      		<input id="password" type="password" class="form-control" name="password" ng-model="userDetail.password" placeholder="Password">
+  		</div>
+		<br><br>
+
+		
+		<br><br>
+		<input type="submit" class="btn btn-info" data-toggle="modal" data-target="#myModal" ng-click="checkUser()" value="Login"/>
+		<input class="btn btn-secondary" type="reset" value="Reset"><br><br><br>
+	</div>
+	<font color="red"><h4>{{error}}</h4></font>
+		</form>
+
+</center>
 </div>
